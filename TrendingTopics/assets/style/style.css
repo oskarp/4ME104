@@ -1,0 +1,154 @@
+/* 
+    Document   : style
+    Created on : Nov 9, 2011, 3:17:01 PM
+    Author     : Oskar Pettersson <oskar@derived.se>
+    Description:
+                Trending topics, fancy footwork.
+                                
+        Credits	   : The bubble is from http://www.sitepoint.com/pure-css3-speech-bubbles/ 
+                     The 3D effect on the text is from 
+*/
+
+body {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+#bgdiv {
+
+    width:100%; height:100%; 
+    z-index:2;
+    top:0; left:0; 
+    position:fixed; 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-origin: content-box;    
+}
+
+#bgdivruse {
+
+    width:100%; height:100%; 
+    z-index:1;
+    top:0; left:0; 
+    position:fixed; 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-origin: content-box
+}
+
+#trend {
+    z-index:5;
+    margin:0 auto;
+
+}
+
+#images {
+    z-index:6;
+}
+
+#trend h1 {
+    font-family:"Myriad Pro",Arial,Helvetica,sans-serif;
+    font-size: 95px;
+    line-height: 1;
+    color: white;
+    /*color: #eee5a2;
+    text-transform: uppercase;
+    /*text-shadow: 5px 5px #32312b;*/
+    text-shadow: 0 1px 0 #ccc,
+        0 2px 0 #c9c9c9,
+        0 3px 0 #bbb,
+        0 4px 0 #b9b9b9,
+        0 5px 0 #aaa,
+        0 6px 1px rgba(0,0,0,.1),
+        0 0 5px rgba(0,0,0,.1),
+        0 1px 3px rgba(0,0,0,.3),
+        0 3px 5px rgba(0,0,0,.2),
+        0 5px 10px rgba(0,0,0,.25),
+        0 10px 10px rgba(0,0,0,.2),
+        0 20px 20px rgba(0,0,0,.15);
+    padding: 0px;
+    margin:0px;
+}
+
+#trend h2 {
+    font-family:"Myriad Pro",Arial,Helvetica,sans-serif;
+    padding: 0px;
+    margin:0px;
+    font-size: 25px;
+    text-shadow:0 0 20px white ;    line-height: 1;
+}
+
+ul.images {
+        z-index:5;
+    padding: 0px;
+    margin:0px;
+}
+ul.images img {
+    z-index:5;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #fff;
+    opacity:0.3;
+    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;  
+    
+}
+
+.images {
+    display:block;
+    position:absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+ul.images img.active {
+    opacity:0.9;
+}
+
+ul.images img:hover{
+    -webkit-box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.1);
+    -webkit-transform: rotate(1deg) scale(1.05);
+    -moz-transform: rotate(1deg) scale(1.05);
+    opacity: 1;
+
+    /*Reflection*/
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(.7, transparent), to(rgba(0,0,0,0.4)));
+
+    /*Glow*/
+    -webkit-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+    -moz-box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+    box-shadow: 0px 0px 20px rgba(255,255,255,0.8);
+}
+
+.speech-bubble
+{
+
+    width: 400px;
+    padding: 10px;
+    background: #404040;
+    color: #fff;
+    font: normal 12px "Segoe UI", Arial, Sans-serif;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+.speech-bubble:after
+{
+    content: "";
+    border: solid 10px transparent; /* set all borders to 10 pixels width */
+    border-top-color: #404040; /* the callout */
+    border-bottom: 0; /* we do not need the bottom border in this case */
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    bottom: -20px; /* border-width of the :after element + padding of the root element */
+    margin: auto;
+}
