@@ -3,9 +3,11 @@ This is a prototype showing how to use PHP to mashup trending twitter topics and
 
 ## Make it work
 In order to get this prototype to work on your server, all you need to do is to generate API-keys for the different services:
-* [Whatthetrend](http://api.whatthetrend.com/)
-* [OpenCalais](http://www.opencalais.com/APIkey)
-* [Flickr](http://www.flickr.com/services/api/)
+
+* API on [Whatthetrend](http://api.whatthetrend.com/)
+* API on [OpenCalais](http://www.opencalais.com/APIkey)
+* API on [Flickr](http://www.flickr.com/services/api/)
+
 Then put these in MashUpServices.php at their appropriate place.
 
 
